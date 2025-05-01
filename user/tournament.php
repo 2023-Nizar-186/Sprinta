@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "functions.php";
+require "../functions.php";
 
 $loggedIn = isset($_SESSION['role']);
 
@@ -11,8 +11,6 @@ if ($loggedIn) {
   // Melakukan query hanya jika $_SESSION["id_user"] sudah terdefinisi
   $profil = query("SELECT * FROM user_212279 WHERE 212279_id_user = '$id_user'")[0];
 }
-
-$lapangan = query("SELECT * FROM lapangan_212279");
 
 if (isset($_POST["simpan"])) {
   if (edit($_POST) > 0) {
@@ -25,7 +23,6 @@ if (isset($_POST["simpan"])) {
           </script>";
   }
 }
-
 
 ?>
 <!DOCTYPE html>
@@ -49,14 +46,14 @@ if (isset($_POST["simpan"])) {
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
 
 </head>
 
@@ -67,22 +64,22 @@ if (isset($_POST["simpan"])) {
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="">
+        <img src="../assets/img/logo.png" alt="">
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.php" class="active">Beranda<br></a></li>
-          <li><a href="user/lapangan.php">Lapangan</a></li>
+          <li><a href="../index.php">Beranda<br></a></li>
+          <li><a href="lapangan.php">Lapangan</a></li>
           <?php if ($loggedIn) : ?>
-            <li class="nav-item">
-              <a class="nav-link" href="user/pesanan.php">Pesanan</a>
+            <li>
+              <a class="active" href="pesanan.php">Pesanan</a>
             </li>
           <?php endif; ?>
-          <li><a href="user/membership.php">Membership</a></li>
-          <li><a href="user/tournament.php">Tournament</a></li>
-          <li><a href="user/promo.php">Promo</a></li>
-          <li><a href="kontak.php">Kontak</a></li>
+          <li><a href="membership.php">Membership</a></li>
+          <li><a href="tournament.php" class="active">Tournament</a></li>
+          <li><a href="promo.php">Promo</a></li>
+          <li><a href="../kontak.php">Kontak</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -93,10 +90,11 @@ if (isset($_POST["simpan"])) {
         </a>
       <?php else : ?>
         <!-- Jika belum login, tampilkan tombol login -->
-        <a href="login.php" class="btn-getstarted" type="submit">
+        <a href="../login.php" class="btn-getstarted" type="submit">
           <i class="bi bi-box-arrow-in-right"></i> Login
         </a>
       <?php endif; ?>
+
 
 
     </div>
@@ -114,7 +112,7 @@ if (isset($_POST["simpan"])) {
           <div class="modal-body">
             <div class="row">
               <div class="col-4 my-5">
-                <img src="img/<?= $profil["212279_foto"]; ?>" alt="Foto Profil" class="img-fluid ">
+                <img src="../img/<?= $profil["212279_foto"]; ?>" alt="Foto Profil" class="img-fluid ">
               </div>
               <div class="col-8">
                 <h5 class="mb-3"><?= $profil["212279_nama_lengkap"]; ?></h5>
@@ -146,7 +144,7 @@ if (isset($_POST["simpan"])) {
           <div class="modal-body">
             <div class="row justify-content-center align-items-center">
               <div class="mb-3">
-                <img src="img/<?= $profil["212279_foto"]; ?>" alt="Foto Profil" class="img-fluid ">
+                <img src="../img/<?= $profil["212279_foto"]; ?>" alt="Foto Profil" class="img-fluid ">
               </div>
               <div class="col">
                 <div class="mb-3">
@@ -162,7 +160,7 @@ if (isset($_POST["simpan"])) {
                 </div>
               </div>
               <div class="col">
-              <div class="mb-3">
+                <div class="mb-3">
                   <label for="212279_no_handphone" class="form-label">No Telp</label>
                   <input type="number" name="212279_no_handphone" class="form-control" id="exampleInputPassword1" value="<?= $profil["212279_no_handphone"]; ?>">
                 </div>
@@ -191,131 +189,59 @@ if (isset($_POST["simpan"])) {
   </div>
   <!-- End Edit Modal -->
 
+
   <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
-
-      <div class="container">
-        <h2 data-aos="fade-up" data-aos-delay="100">Sehatkan Dirimu Dengan<br>Berolahraga di <span class="text-"> Sprinta </span> <br> Sport Center</h2>
-        <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
-          <a href="user/lapangan.php" class="btn-get-started">Booking Sekarang <i class="bi bi-arrow-right"></i></a>
-        </div>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6 order-1 order-lg-2 my-auto" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <img src="../assets/img/hero-bg.jpg" alt="">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Tournament</h1>
+              <p class="mb-0">Tournament yang sedang berlangsung</p>
+            </div>
           </div>
+        </div>
+      </div>
+    </div><!-- End Page Title -->
 
-          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
-            <h3>Sprinta Sport Center Hadir Untuk Anda</h3>
-            <p class="fst-italic">
-              Temukan pengalaman olahraga yang luar biasa dengan fasilitas premium kami.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Fasilitas olahraga terbaru dan terlengkap untuk latihan yang lebih efektif.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Pelatih profesional yang siap membantu Anda mencapai tujuan dengan strategi yang terbukti.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Lingkungan yang mendukung dan nyaman, menciptakan suasana positif untuk setiap latihan.</span></li>
-            </ul>
-            <a href="#" class="read-more "><span>Pelajari Lebih Lanjut</span><i class="bi bi-arrow-right"></i></a>
+    <section id="events" class="events section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-img">
+                <img src="../assets/img/events-item-1.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Introduction to webdesign</a></h5>
+                <p class="fst-italic text-center">Sunday, September 26th at 7:00 pm</p>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+              </div>
+            </div>
           </div>
-
-
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Counts Section -->
-    <section id="counts" class="section counts light-background">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-6 col-lg-3 col-md-6">
-            <div class="shadow rounded stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Pelanggan</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-6 col-lg-3 col-md-6">
-            <div class="shadow rounded stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Lapangan</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-6 col-lg-3 col-md-6">
-            <div class="shadow rounded stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Tournament</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-6 col-lg-3 col-md-6">
-            <div class="shadow rounded stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Membership</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Counts Section -->
-
-    <!-- Courses Section -->
-    <section id="courses" class="courses section">
-
-      <!-- Section Title -->
-      <div class="container d-flex justify-content-between align-items-center" data-aos="fade-up">
-        <div class="left section-title">
-          <h2>Lapangan</h2>
-          <p>Lapangan Terbaik</p>
-        </div>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-          <?php foreach ($lapangan as $row) : ?>
-
-            <div class="col-6 col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-              <div class="course-item">
-                <img src="img/<?= $row["212279_foto"]; ?>" class="img-fluid" alt="...">
-                <div class="course-content">
-                  <p class="category">Lapangan</p>
-                </div>
-                <div class="p-3 text-content">
-                  <h3><a href="course-details.html"><?= $row["212279_nama"]; ?></a></h3>
-                  <p class="description"><?= $row["212279_keterangan"]; ?></p>
-                </div>
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-img">
+                <img src="../assets/img/events-item-2.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Marketing Strategies</a></h5>
+                <p class="fst-italic text-center">Sunday, November 15th at 7:00 pm</p>
+                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
               </div>
             </div>
 
-          <?php endforeach; ?>
-
+          </div>
         </div>
 
       </div>
 
-    </section><!-- /Courses Section -->
-
+    </section><!-- /Events Section -->
   </main>
 
   <footer id="footer" class="footer position-relative light-background">
@@ -379,15 +305,15 @@ if (isset($_POST["simpan"])) {
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
 
 </body>
 
