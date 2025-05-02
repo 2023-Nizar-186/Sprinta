@@ -202,7 +202,7 @@ if (isset($_POST["simpan"])) {
         <i class="bi bi-geo-alt flex-shrink-0"></i>
         <div>
           <h3>Address</h3>
-          <p>A108 Adam Street, New York, NY 535022</p>
+          <p>Malang, Jawa Timur, Indonesia</p>
         </div>
       </div><!-- End Info Item -->
 
@@ -210,7 +210,7 @@ if (isset($_POST["simpan"])) {
         <i class="bi bi-telephone flex-shrink-0"></i>
         <div>
           <h3>Call Us</h3>
-          <p>+1 5589 55488 55</p>
+          <p>+62 821-8081-2741</p>
         </div>
       </div><!-- End Info Item -->
 
@@ -218,7 +218,7 @@ if (isset($_POST["simpan"])) {
         <i class="bi bi-envelope flex-shrink-0"></i>
         <div>
           <h3>Email Us</h3>
-          <p>info@example.com</p>
+          <p>sportcenter@sprinta.run</p>
         </div>
       </div><!-- End Info Item -->
 
@@ -261,10 +261,10 @@ if (isset($_POST["simpan"])) {
                         <span class="sitename">Sprinta</span>
                     </a>
                     <div class="footer-contact pt-3">
-                        <p>A108 Adam Street</p>
+                        <p>Malang</p>
                         <p>Indonesia</p>
-                        <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                        <p><strong>Email:</strong> <span>info@example.com</span></p>
+                        <p class="mt-3"><strong>Phone:</strong> <span>+62 821-8081-2741</span></p>
+                        <p><strong>Email:</strong> <span>sportcenter@sprinta.run</span></p>
                     </div>
                     <div class="social-links d-flex mt-4">
                         <a href=""><i class="bi bi-whatsapp"></i></a>

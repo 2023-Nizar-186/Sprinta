@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost", "spry5213_nizar", "nizar186", "spry5213_dbfutsal");
+$conn = mysqli_connect("localhost", "root", "", "dbfutsal");
 
 function query($query)
 {
@@ -306,6 +306,6 @@ function konfirmasi($id_sewa)
 
   $id = $id_sewa;
 
+
   mysqli_query($conn, "UPDATE bayar_212279 set 212279_konfirmasi = ('Terkonfirmasi') WHERE 212279_id_sewa = '$id'");
-  return mysqli_affected_rows($conn);
-}
+  return mysqli_affected_rows($conn);}

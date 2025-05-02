@@ -73,7 +73,7 @@ if (isset($_POST["simpan"])) {
           <li><a href="lapangan.php">Lapangan</a></li>
           <?php if ($loggedIn) : ?>
             <li>
-              <a class="active" href="pesanan.php">Pesanan</a>
+              <a href="pesanan.php">Pesanan</a>
             </li>
           <?php endif; ?>
           <li><a href="membership.php">Membership</a></li>
@@ -192,57 +192,57 @@ if (isset($_POST["simpan"])) {
 
   <main class="main">
 
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <img src="../assets/img/hero-bg.jpg" alt="">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Tournament</h1>
-              <p class="mb-0">Tournament yang sedang berlangsung</p>
+  <!-- Page Title -->
+  <div class="page-title" data-aos="fade">
+    <img src="../assets/img/hero-bg.jpg" alt="">
+    <div class="heading">
+      <div class="container">
+        <div class="row d-flex justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1>Turnamen Olahraga</h1>
+            <p class="mb-0">Turnamen olahraga yang sedang berlangsung</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- End Page Title -->
+
+  <section id="events" class="events section">
+
+    <div class="container" data-aos="fade-up">
+
+      <div class="row">
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="card">
+            <div class="card-img">
+              <img src="../assets/img/events-item-1.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a href="">Futsal Championship</a></h5>
+              <p class="fst-italic text-center">Minggu, 26 September pukul 19:00 WIB</p>
+              <p class="card-text">Bergabunglah dalam turnamen futsal seru antar tim terbaik. Hadiah menarik menanti tim yang berhasil keluar sebagai juara. Segera daftarkan timmu sekarang!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="card">
+            <div class="card-img">
+              <img src="../assets/img/events-item-2.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a href="">Basketball League</a></h5>
+              <p class="fst-italic text-center">Minggu, 15 November pukul 19:00 WIB</p>
+              <p class="card-text">Turnamen bola basket ini mengundang tim terbaik untuk bersaing memperebutkan gelar juara. Siapakah yang akan mengangkat trofi? Ayo, daftarkan timmu dan buktikan kemampuanmu!</p>
             </div>
           </div>
         </div>
       </div>
-    </div><!-- End Page Title -->
 
-    <section id="events" class="events section">
+    </div>
 
-      <div class="container" data-aos="fade-up">
+  </section><!-- /Events Section -->
+</main>
 
-        <div class="row">
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="card">
-              <div class="card-img">
-                <img src="../assets/img/events-item-1.jpg" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="">Introduction to webdesign</a></h5>
-                <p class="fst-italic text-center">Sunday, September 26th at 7:00 pm</p>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="card">
-              <div class="card-img">
-                <img src="../assets/img/events-item-2.jpg" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="">Marketing Strategies</a></h5>
-                <p class="fst-italic text-center">Sunday, November 15th at 7:00 pm</p>
-                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Events Section -->
-  </main>
 
   <footer id="footer" class="footer position-relative light-background">
 
@@ -253,10 +253,10 @@ if (isset($_POST["simpan"])) {
             <span class="sitename">Sprinta</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
+            <p>Malang</p>
             <p>Indonesia</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+62 821-8081-2741</span></p>
+            <p><strong>Email:</strong> <span>sportcenter@sprinta.run</span></p>
           </div>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-whatsapp"></i></a>

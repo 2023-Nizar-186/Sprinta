@@ -72,7 +72,7 @@ if (isset($_POST["simpan"])) {
           <li><a href="lapangan.php">Lapangan</a></li>
           <?php if ($loggedIn): ?>
             <li>
-              <a class="active" href="pesanan.php">Pesanan</a>
+              <a href="pesanan.php">Pesanan</a>
             </li>
         <?php endif; ?>
           <li><a href="membership.php" class="active">Membership</a></li>
@@ -208,78 +208,79 @@ if (isset($_POST["simpan"])) {
 
   <section id="pricing" class="pricing section">
 
-<div class="container">
+  <div class="container">
 
-  <div class="row gy-3">
+<div class="row gy-3">
 
-    <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="100">
-      <div class="pricing-item">
-        <h3>Reguler</h3>
-        <ul>
-          <li>Aida dere</li>
-          <li>Nec feugiat nisl</li>
-          <li>Nulla at volutpat dola</li>
-          <li class="na">Pharetra massa</li>
-          <li class="na">Massa ultricies mi</li>
-        </ul>
-        <div class="btn-wrap">
-          <a href="#" class="btn-buy">Pesan</a>
-        </div>
+  <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+    <div class="pricing-item">
+      <h3>Reguler</h3>
+      <ul>
+        <li>Akses gym sepuasnya</li>
+        <li>Free konsultasi personal trainer 1x</li>
+        <li>Kelas Zumba mingguan</li>
+        <li class="na">Akses sauna & spa</li>
+        <li class="na">Gratis air mineral & handuk</li>
+      </ul>
+      <div class="btn-wrap">
+        <a href="#" class="btn-buy">Pesan</a>
       </div>
-    </div><!-- End Pricing Item -->
+    </div>
+  </div><!-- End Pricing Item -->
 
-    <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="200">
-      <div class="pricing-item featured">
-        <h3>Business</h3>
-        <ul>
-          <li>Aida dere</li>
-          <li>Nec feugiat nisl</li>
-          <li>Nulla at volutpat dola</li>
-          <li>Pharetra massa</li>
-          <li class="na">Massa ultricies mi</li>
-        </ul>
-        <div class="btn-wrap">
-          <a href="#" class="btn-buy">Pesan</a>
-        </div>
+  <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+    <div class="pricing-item featured">
+      <h3>Business</h3>
+      <ul>
+        <li>Akses gym sepuasnya</li>
+        <li>Free konsultasi personal trainer 2x</li>
+        <li>Kelas Zumba & Yoga mingguan</li>
+        <li>Akses sauna & spa</li>
+        <li class="na">Gratis air mineral & handuk</li>
+      </ul>
+      <div class="btn-wrap">
+        <a href="#" class="btn-buy">Pesan</a>
       </div>
-    </div><!-- End Pricing Item -->
+    </div>
+  </div><!-- End Pricing Item -->
 
-    <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
-      <div class="pricing-item">
-        <h3>Silver</h3>
-        <ul>
-          <li>Aida dere</li>
-          <li>Nec feugiat nisl</li>
-          <li>Nulla at volutpat dola</li>
-          <li>Pharetra massa</li>
-          <li>Massa ultricies mi</li>
-        </ul>
-        <div class="btn-wrap">
-          <a href="#" class="btn-buy">Pesan</a>
-        </div>
+  <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+    <div class="pricing-item">
+      <h3>Silver</h3>
+      <ul>
+        <li>Akses gym sepuasnya</li>
+        <li>Free konsultasi personal trainer 4x</li>
+        <li>Kelas Zumba, Yoga & Body Combat</li>
+        <li>Akses sauna & spa</li>
+        <li>Gratis air mineral & handuk</li>
+      </ul>
+      <div class="btn-wrap">
+        <a href="#" class="btn-buy">Pesan</a>
       </div>
-    </div><!-- End Pricing Item -->
+    </div>
+  </div><!-- End Pricing Item -->
 
-    <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
-      <div class="pricing-item">
-        <span class="advanced">Populer</span>
-        <h3>Ultimate</h3>
-        <ul>
-          <li>Aida dere</li>
-          <li>Nec feugiat nisl</li>
-          <li>Nulla at volutpat dola</li>
-          <li>Pharetra massa</li>
-          <li>Massa ultricies mi</li>
-        </ul>
-        <div class="btn-wrap">
-          <a href="#" class="btn-buy">Pesan</a>
-        </div>
+  <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+    <div class="pricing-item">
+      <span class="advanced">Populer</span>
+      <h3>Ultimate</h3>
+      <ul>
+        <li>Akses gym 24 jam</li>
+        <li>Free konsultasi personal trainer tanpa batas</li>
+        <li>Semua kelas premium (Zumba, Yoga, Body Combat, Pilates)</li>
+        <li>Akses full fasilitas: sauna, spa, kolam renang</li>
+        <li>Gratis air mineral, handuk, & suplemen harian</li>
+      </ul>
+      <div class="btn-wrap">
+        <a href="#" class="btn-buy">Pesan</a>
       </div>
-    </div><!-- End Pricing Item -->
-
-  </div>
+    </div>
+  </div><!-- End Pricing Item -->
 
 </div>
+
+</div>
+
 
 </section><!-- /Pricing Section -->
   </main>
@@ -293,10 +294,10 @@ if (isset($_POST["simpan"])) {
             <span class="sitename">Sprinta</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
+            <p>Malang</p>
             <p>Indonesia</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+62 821-8081-2741</span></p>
+            <p><strong>Email:</strong> <span>sportcenter@sprinta.run</span></p>
           </div>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-whatsapp"></i></a>

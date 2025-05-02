@@ -269,10 +269,10 @@ if (isset($_POST["bayar_212279"])) {
             <span class="sitename">Sprinta</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
+            <p>Malang</p>
             <p>Indonesia</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+62 821-8081-2741</span></p>
+            <p><strong>Email:</strong> <span>sportcenter@sprinta.run</span></p>
           </div>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-whatsapp"></i></a>

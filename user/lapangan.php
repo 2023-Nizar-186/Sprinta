@@ -268,46 +268,49 @@ if (isset($_POST["pesan"])) {
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="pesanModalLabel<?= $row["212279_id_lapangan"]; ?>">Pesan Lapangan <?= $row["212279_nama"]; ?></h5>
+                    <h5 class="modal-title" id="pesanModalLabel<?= $row["212279_id_lapangan"]; ?>">Pesan Lapangan <?= htmlspecialchars($row["212279_nama"]); ?></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <form action="" method="post">
                     <div class="modal-body">
-                      <!-- konten form modal -->
-                      <div class="row justify-content-center align-items-center">
-                        <div class="mb-3">
-                          <img src="../img/<?= $row["212279_foto"]; ?>" alt="gambar lapangan" class="img-fluid">
-                        </div>
-                        <div class="text-center">
-                          <h6 name="harga">Harga : <?= $row["212279_harga"]; ?></h6>
-                        </div>
-                        <div class="col">
-                          <input type="hidden" name="id_lpg" class="form-control" id="exampleInputPassword1" value="<?= $row["212279_id_lapangan"]; ?>">
-                          <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Tanggal Main</label>
-                            <input type="datetime-local" name="tgl_main" class="form-control" id="exampleInputPassword1">
-                          </div>
-                        </div>
-                        <div class="col">
-                          <input type="hidden" name="harga" class="form-control" id="exampleInputPassword1" value="<?= $row["212279_harga"]; ?>">
-                          <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Lama Main</label>
-                            <input type="time" name="jam_mulai" class="form-control" id="exampleInputPassword1">
-                          </div>                      
-                        </div>
-                        <div class="container d-flex">
-                          <p class="small ms-auto">*Menit akan diabaikan</p>
-                        </div>
+                      <div class="mb-3 text-center">
+                        <img src="../img/<?= htmlspecialchars($row["212279_foto"]); ?>" alt="Gambar Lapangan" class="img-fluid rounded">
+                      </div>
+                      <div class="text-center mb-3">
+                        <h6>Harga: Rp <?= number_format($row["212279_harga"], 0, ',', '.'); ?></h6>
+                      </div>
+                      <input type="hidden" name="id_lpg" value="<?= htmlspecialchars($row["212279_id_lapangan"]); ?>">
+                      <input type="hidden" name="harga" value="<?= htmlspecialchars($row["212279_harga"]); ?>">
+                      <div class="mb-3">
+                        <label for="tgl_main_<?= $row["212279_id_lapangan"]; ?>" class="form-label">Tanggal Main</label>
+                        <input type="date" name="tgl_main" id="tgl_main_<?= $row["212279_id_lapangan"]; ?>" class="form-control" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="jam_mulai_<?= $row["212279_id_lapangan"]; ?>" class="form-label">Jam Mulai</label>
+                        <input type="time" name="jam_mulai" id="jam_mulai_<?= $row["212279_id_lapangan"]; ?>" class="form-control" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="durasi_main_<?= $row["212279_id_lapangan"]; ?>" class="form-label">Lama Main (Jam)</label>
+                        <select name="durasi_main" id="durasi_main_<?= $row["212279_id_lapangan"]; ?>" class="form-select" required>
+                          <option value="" disabled selected>Pilih durasi</option>
+                          <option value="1">1 Jam</option>
+                          <option value="2">2 Jam</option>
+                          <option value="3">3 Jam</option>
+                          <option value="4">4 Jam</option>
+                          <option value="5">5 Jam</option>
+                        </select>
+                        <div class="form-text">*Durasi dihitung per jam</div>
                       </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                      <button type="submit" class="btn btn-primary" name="pesan" id="pesan">Pesan</button>
+                      <button type="submit" class="btn btn-primary" name="pesan">Pesan</button>
                     </div>
                   </form>
                 </div>
               </div>
             </div>
+
 
             <!-- Modal jadwal -->
             <div class="modal fade" id="jadwalModal<?= $row["212279_id_lapangan"]; ?>" tabindex="-1" aria-labelledby="jadwalModalLabel<?= $row["212279_id_lapangan"]; ?>" aria-hidden="true">
@@ -355,10 +358,10 @@ if (isset($_POST["pesan"])) {
             <span class="sitename">Sprinta</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
+            <p>Malang</p>
             <p>Indonesia</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+62 821-8081-2741</span></p>
+            <p><strong>Email:</strong> <span>sportcenter@sprinta.run</span></p>
           </div>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-whatsapp"></i></a>

@@ -73,7 +73,7 @@ if (isset($_POST["simpan"])) {
           <li><a href="lapangan.php">Lapangan</a></li>
           <?php if ($loggedIn) : ?>
             <li>
-              <a class="active" href="pesanan.php">Pesanan</a>
+              <a href="pesanan.php">Pesanan</a>
             </li>
           <?php endif; ?>
           <li><a href="membership.php">Membership</a></li>
@@ -191,54 +191,59 @@ if (isset($_POST["simpan"])) {
 
   <main class="main">
 
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <img src="../assets/img/hero-bg.jpg" alt="">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Promo</h1>
-              <p class="mb-0">Promo yang sedang berlangsung</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- End Page Title -->
-    <section id="courses" class="courses section">
+  <!-- Page Title -->
+  <div class="page-title" data-aos="fade">
+    <img src="../assets/img/hero-bg.jpg" alt="">
+    <div class="heading">
       <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-6 col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="course-item">
-              <img src="../assets/img/course-1.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <p class="category">Lapangan</p>
-              </div>
-              <div class="p-3 text-content">
-                <h3><a href="course-details.html">Promo HUT RI</a></h3>
-                <p class="description">17 Agustus - 22 Agustus 2024</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-6 col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="course-item">
-              <img src="../assets/img/course-1.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <p class="category">Membership</p>
-              </div>
-              <div class="p-3 text-content">
-                <h3><a href="course-details.html">Promo buy 1 get 1</a></h3>
-                <p class="description">11 September - 15 September 2024</p>
-              </div>
-            </div>
+        <div class="row d-flex justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1>Promo Olahraga</h1>
+            <p class="mb-0">Promo yang sedang berlangsung untuk semua penggemar olahraga</p>
           </div>
         </div>
       </div>
-      <section>
-  </main>
+    </div>
+  </div><!-- End Page Title -->
+
+  <section id="courses" class="courses section">
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-6 col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="course-item">
+            <img src="../assets/img/course-1.jpg" class="img-fluid" alt="...">
+            <div class="course-content">
+              <p class="category">Lapangan</p>
+            </div>
+            <div class="p-3 text-content">
+              <h3><a href="course-details.html">Promo HUT RI</a></h3>
+              <p class="description">17 Agustus - 22 Agustus 2024</p>
+              <p class="description">Diskon 50% untuk penyewaan lapangan futsal, sepak bola, dan basket. Ayo rayakan kemerdekaan dengan olahraga!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="course-item">
+            <img src="../assets/img/course-1.jpg" class="img-fluid" alt="...">
+            <div class="course-content">
+              <p class="category">Membership</p>
+            </div>
+            <div class="p-3 text-content">
+              <h3><a href="course-details.html">Promo Buy 1 Get 1 Membership</a></h3>
+              <p class="description">11 September - 15 September 2024</p>
+              <p class="description">Beli 1 membership gym, dapatkan 1 gratis! Ajak temanmu untuk berolahraga bersama di fasilitas gym kami yang lengkap.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Promo Section -->
+</main>
+
 
   <footer id="footer" class="footer position-relative light-background">
 
@@ -249,10 +254,10 @@ if (isset($_POST["simpan"])) {
             <span class="sitename">Sprinta</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
+            <p>Malang</p>
             <p>Indonesia</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+62 821-8081-2741</span></p>
+            <p><strong>Email:</strong> <span>sportcenter@sprinta.run</span></p>
           </div>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-whatsapp"></i></a>
