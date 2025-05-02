@@ -7,10 +7,10 @@ if (isset($_SESSION["role"])) {
   $role = $_SESSION["role"];
   if ($role == "Admin") {
     header("Location: admin/home.php");
-    exit
+    exit;
   } else {
     header("Location: user/lapangan.php");
-    exit
+    exit;
   }
 }
 
