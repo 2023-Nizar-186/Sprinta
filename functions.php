@@ -1,6 +1,8 @@
 <?php
 
 $conn = mysqli_connect("localhost", "root", "", "dbfutsal");
+// $conn = mysqli_connect("localhost", "spry5213_nizar", "nizar186", "spry5213_dbfutsal");
+
 
 function query($query)
 {
