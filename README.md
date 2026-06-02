@@ -161,16 +161,6 @@ Contoh:
 
 ---
 
-## 👨‍💻 Developer
-
-**Ahmad Nizar Rusdiawan**
-
-Informatics Student  
-Universitas Muhammadiyah Malang
-
-GitHub:
-https://github.com/2023-Nizar-186
-
 ---
 
 ## 📄 License
